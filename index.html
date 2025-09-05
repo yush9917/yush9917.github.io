@@ -25,7 +25,6 @@
     .hero h3{ font-size:1.5em; color:#f2c811; margin-top:10px; animation:fadeIn 2.5s ease-in; position:relative; z-index:2; }
     .hero p.repo-desc { position:relative; z-index:2; margin-top:20px; color:#ccc; max-width:700px; font-size:1.1em; }
 
-    /* Subtle Name Background */
     .hero .name-bg { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:80%; height:120px; background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; opacity:0.15; border-radius:20px; z-index:1; }
 
     /* About Section */
@@ -58,11 +57,9 @@
 
     footer { padding:30px; text-align:center; background:#222233; margin-top:50px; color:#fff; border-top:2px solid #f2c811; }
 
-    /* Animations */
     @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
     @keyframes slideIn { from{transform:translateY(50px);opacity:0;} to{transform:translateY(0);opacity:1;} }
 
-    /* Responsive */
     @media(max-width:768px){ .about{flex-direction:column;text-align:center;}.about-text{text-align:center;} }
   </style>
 </head>
@@ -72,7 +69,7 @@
   <section class="hero">
     <div class="name-bg"></div>
     <h1>
-      <img src="https://images.unsplash.com/photo-1611078486021-3344bce90c91?auto=format&fit=crop&w=60&q=80" alt="AI icon">
+      <img src="https://raw.githubusercontent.com/yush9917/images/main/ai-icon.png" alt="AI Icon">
       Hi, I'm Ayush Vashishtha
     </h1>
     <h3>Data Analyst | AI & GenAI Enthusiast | Ex-US IT Recruiter</h3>
