@@ -10,40 +10,100 @@
       font-family: Arial, sans-serif;
       background-color: #0f2027;
       color: white;
-      text-align: center;
     }
     header {
-      padding: 50px;
-      background: linear-gradient(90deg, #0f2027, #2c5364);
+      height: 100vh;
+      background: url("https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
-    h1 { font-size: 2.5em; margin: 0; }
-    h2 { color: #f2c811; }
-    h3 { color: #66fcf1; }
-    section {
-      padding: 40px 20px;
-    }
-    img {
-      margin: 15px 0;
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
     }
-    a { color: #f2c811; text-decoration: none; font-weight: bold; }
-    a:hover { color: #66fcf1; }
-    footer {
-      margin-top: 50px;
+    header h3 {
+      margin-top: 10px;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 15px;
+      border-radius: 8px;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #f2c811;
+      margin-bottom: 20px;
+    }
+    .skills img {
+      margin: 10px;
+      height: 40px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
       padding: 20px;
+    }
+    .card {
+      background: #1c1c1c;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .card a {
+      color: #66fcf1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .stats img {
+      margin: 15px;
+    }
+    footer {
       background: #0f2027;
+      padding: 30px;
+      text-align: center;
+    }
+    footer a {
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: #f2c811;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    footer a:hover {
+      background: #66fcf1;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Hero Section -->
   <header>
     <h1>👋 Hi, I'm Ayush Vashishtha</h1>
     <h3>Aspiring Data Analyst | AI Enthusiast | Ex-US IT Recruiter</h3>
   </header>
 
-  <!-- About Section -->
+  <!-- About Me -->
   <section>
     <h2>👨‍💻 About Me</h2>
     <p>
@@ -54,39 +114,57 @@
     </p>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Skills -->
+  <section>
+    <h2>🛠️ Tech & Tools</h2>
+    <div class="skills">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+      <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white">
+      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white">
+      <img src="https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
+      <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
+      <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white">
+    </div>
+  </section>
+
+  <!-- Projects -->
   <section>
     <h2>🚀 Featured Projects</h2>
-
-    <div>
-      <h3>1️⃣ Crew AI Project with Telegram Chatbot</h3>
-      <img src="https://github.com/yush9917/images/blob/main/crew-ai.png?raw=true" width="400">
-      <p>🤖 Built a chatbot delivering US Market News using Crew AI & Telegram API.</p>
-      <a href="https://github.com/yush9917/crew-ai-telegram">🔗 View Repo</a>
+    <div class="projects">
+      <div class="card">
+        <img src="https://github.com/yush9917/images/blob/main/crew-ai.png?raw=true">
+        <h3>Crew AI Project with Telegram Chatbot</h3>
+        <p>🤖 Built a chatbot delivering US Market News using Crew AI & Telegram API.</p>
+        <a href="https://github.com/yush9917/crew-ai-telegram">🔗 View Repo</a>
+      </div>
+      <div class="card">
+        <img src="https://github.com/yush9917/images/blob/main/accounts-payables.png?raw=true">
+        <h3>Accounts Payable Agent Summary</h3>
+        <p>💰 Automated Accounts Payable Summaries with structured insights & reporting.</p>
+        <a href="https://github.com/yush9917/accounts-payable-summary">🔗 View Repo</a>
+      </div>
+      <div class="card">
+        <img src="https://github.com/yush9917/images/blob/main/Prompt-Engineering%20Project%20AI.png?raw=true">
+        <h3>Prompt Engineering – Song & Portfolio</h3>
+        <p>🎵 Used AI Prompts to generate creative content and a personal portfolio.</p>
+        <a href="https://github.com/yush9917/prompt-song-portfolio">🔗 View Repo</a>
+      </div>
     </div>
-    <br>
+  </section>
 
-    <div>
-      <h3>2️⃣ Accounts Payable Agent Summary</h3>
-      <img src="https://github.com/yush9917/images/blob/main/accounts-payables.png?raw=true" width="400">
-      <p>💰 Automated Accounts Payable Summaries with structured insights & reporting.</p>
-      <a href="https://github.com/yush9917/accounts-payable-summary">🔗 View Repo</a>
-    </div>
-    <br>
-
-    <div>
-      <h3>3️⃣ Prompt Engineering – Song & Portfolio</h3>
-      <img src="https://github.com/yush9917/images/blob/main/Prompt-Engineering%20Project%20AI.png?raw=true" width="400">
-      <p>🎵 Used AI Prompts to generate creative content and a personal portfolio.</p>
-      <a href="https://github.com/yush9917/prompt-song-portfolio">🔗 View Repo</a>
-    </div>
+  <!-- GitHub Stats -->
+  <section class="stats">
+    <h2>📊 GitHub Stats</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=yush9917&show_icons=true&theme=tokyonight&hide_border=true" height="180">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yush9917&layout=compact&theme=tokyonight&hide_border=true" height="180">
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>📧 <a href="mailto:ayushvashisht9917@gmail.com">ayushvashisht9917@gmail.com</a> | 
-       💼 <a href="https://www.linkedin.com/in/ayush-vashishta-0649a9204/">LinkedIn</a> | 
-       🐙 <a href="https://github.com/yush9917">GitHub</a></p>
+    <h2>📬 Connect With Me</h2>
+    <a href="mailto:ayushvashisht9917@gmail.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/ayush-vashishta-0649a9204/">💼 LinkedIn</a>
+    <a href="https://github.com/yush9917">🐙 GitHub</a>
   </footer>
 </body>
 </html>
