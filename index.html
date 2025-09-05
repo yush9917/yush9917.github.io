@@ -3,145 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayush Vashishtha - Portfolio</title>
+  <title>Ayush Vashishtha - Data Analyst Portfolio</title>
   <style>
+    /* ---------- General ---------- */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0a0a0a;
-      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
     }
-    header {
+    h1, h2, h3 {
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+    a {
+      text-decoration: none;
+      color: #66fcf1;
+      transition: 0.3s;
+    }
+    a:hover { color: #f2c811; }
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+    /* ---------- Hero ---------- */
+    .hero {
       height: 100vh;
-      background: url("https://images.unsplash.com/photo-1505672678657-cc7037095e61?auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+      background: url("https://images.unsplash.com/photo-1581090700227-4c4a3c09c8df?auto=format&fit=crop&w=1350&q=80") no-repeat center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: white;
-      background-attachment: fixed;
       position: relative;
     }
-    header::after {
+    .hero::after {
       content: "";
-      position: absolute;
-      top: 0; left: 0;
+      position: absolute; top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0,0,0,0.6);
     }
-    header h1, header h3 {
+    .hero-content {
       position: relative;
       z-index: 2;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      padding: 10px 20px;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.5);
+    .hero h1 {
+      font-size: 3.2em;
     }
-    header h3 {
-      margin-top: 10px;
-      padding: 5px 15px;
-      border-radius: 8px;
-      background: rgba(0,0,0,0.4);
+    .hero h3 {
+      font-size: 1.4em;
+      font-weight: 400;
     }
-    section {
-      padding: 60px 20px;
-      text-align: center;
+    /* ---------- About ---------- */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
     }
-    h2 {
-      color: #f2c811;
-      margin-bottom: 20px;
+    .about img {
+      max-width: 320px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
     }
-    .skills img {
-      margin: 10px;
-      height: 40px;
+    .about-text {
+      max-width: 600px;
+      text-align: left;
     }
+    /* ---------- Skills ---------- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .skills-grid img {
+      height: 50px;
+    }
+    /* ---------- Projects ---------- */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      padding: 20px;
     }
     .card {
       background: #1c1c1c;
       border-radius: 15px;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
       padding: 20px;
       transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: scale(1.05);
-    }
+    .card:hover { transform: translateY(-10px); }
     .card img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
     }
-    .card a {
-      color: #66fcf1;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .stats img {
-      margin: 15px;
-    }
-    footer {
-      background: #0f2027;
-      padding: 30px;
-      text-align: center;
-    }
-    footer a {
+    /* ---------- Contact ---------- */
+    .contact a {
       margin: 10px;
       padding: 12px 25px;
       border-radius: 8px;
       background: #f2c811;
       color: black;
-      text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
+      display: inline-block;
     }
-    footer a:hover {
+    .contact a:hover {
       background: #66fcf1;
       color: black;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #0f2027;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header>
-    <h1>👋 Hi, I'm Ayush Vashishtha</h1>
-    <h3>Aspiring Data Analyst | AI & GenAI Enthusiast | Ex-US IT Recruiter</h3>
-  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>👋 Hi, I'm Ayush Vashishtha</h1>
+      <h3>Data Analyst | AI & GenAI Enthusiast | Ex-US IT Recruiter</h3>
+    </div>
+  </section>
 
-  <!-- About Me -->
+  <!-- About -->
   <section>
     <h2>👨‍💻 About Me</h2>
-    <p>
-      I’m <b>Ayush Vashishtha</b>, an aspiring <b>Data Analyst</b> with a strong foundation in 
-      <b>Python, SQL, Excel, and Power BI</b>, currently pursuing my <b>MBA (2026)</b> from APJ Abdul Kalam Technical University.
-      <br><br>
-      With <b>2 years of professional experience in US IT Recruitment</b> at QualRec Solutions LLC, 
-      I developed expertise in understanding business requirements, analyzing data, and enabling decision-making.
-      This unique blend of <b>business knowledge + data analytics</b> allows me to bridge the gap between 
-      strategic needs and technical execution. 
-      <br><br>
-      I have worked on projects involving <b>AI chatbots, financial process automation, and Generative AI applications</b>—
-      showcasing my ability to apply technology for solving real-world problems. 
-      I’m passionate about <b>data storytelling, visualization, and predictive analytics</b> 
-      to empower businesses with actionable intelligence.
-      <br><br>
-      🌟 <b>Goal</b>: To secure a <b>Data Analytics internship</b> where I can apply my skills, 
-      learn from industry experts, and contribute to impactful AI-driven projects.
-    </p>
+    <div class="about">
+      <div class="about-text">
+        <p>
+          I’m <b>Ayush Vashishtha</b>, an aspiring <b>Data Analyst</b> with a strong foundation in
+          <b>Python, SQL, Excel, and Power BI</b>, currently pursuing my <b>MBA (2026)</b> from APJ Abdul Kalam Technical University.
+        </p>
+        <p>
+          With <b>2 years of professional experience in US IT Recruitment</b> at QualRec Solutions LLC,
+          I developed expertise in analyzing business requirements, working with data, and supporting decision-making processes.
+        </p>
+        <p>
+          My projects include <b>AI chatbots, financial process automation, and Generative AI applications</b> —
+          showcasing my ability to apply <b>AI & Data tools</b> for solving real-world problems.
+        </p>
+        <p>
+          🌟 <b>Goal:</b> To secure a <b>Data Analytics internship</b> where I can apply my skills,
+          learn from industry experts, and contribute to impactful AI-driven projects.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="AI illustration">
+    </div>
   </section>
 
   <!-- Skills -->
   <section>
-    <h2>🛠️ Tech & Tools</h2>
-    <div class="skills">
+    <h2>🛠️ Skills & Tools</h2>
+    <div class="skills-grid">
       <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
       <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white">
       <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white">
@@ -153,42 +173,47 @@
 
   <!-- Projects -->
   <section>
-    <h2>🚀 Featured Projects</h2>
+    <h2>🚀 Projects</h2>
     <div class="projects">
       <div class="card">
         <img src="https://github.com/yush9917/images/blob/main/crew-ai.png?raw=true">
         <h3>Crew AI Project with Telegram Chatbot</h3>
-        <p>🤖 Built a chatbot delivering US Market News using Crew AI & Telegram API.</p>
+        <p>🤖 Chatbot delivering US Market News using Crew AI & Telegram API.</p>
         <a href="https://github.com/yush9917/crew-ai-telegram">🔗 View Repo</a>
       </div>
       <div class="card">
         <img src="https://github.com/yush9917/images/blob/main/accounts-payables.png?raw=true">
         <h3>Accounts Payable Agent Summary</h3>
-        <p>💰 Automated Accounts Payable Summaries with structured insights & reporting.</p>
+        <p>💰 Automated AP Summaries with structured insights & reporting.</p>
         <a href="https://github.com/yush9917/accounts-payable-summary">🔗 View Repo</a>
       </div>
       <div class="card">
         <img src="https://github.com/yush9917/images/blob/main/Prompt-Engineering%20Project%20AI.png?raw=true">
         <h3>Prompt Engineering – Song & Portfolio</h3>
-        <p>🎵 Used AI Prompts to generate creative content and a personal portfolio.</p>
+        <p>🎵 Used AI prompts to generate creative content & portfolio.</p>
         <a href="https://github.com/yush9917/prompt-song-portfolio">🔗 View Repo</a>
       </div>
     </div>
   </section>
 
   <!-- GitHub Stats -->
-  <section class="stats">
+  <section>
     <h2>📊 GitHub Stats</h2>
     <img src="https://github-readme-stats.vercel.app/api?username=yush9917&show_icons=true&theme=tokyonight&hide_border=true" height="180">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yush9917&layout=compact&theme=tokyonight&hide_border=true" height="180">
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Contact -->
+  <section class="contact">
     <h2>📬 Connect With Me</h2>
     <a href="mailto:ayushvashisht9917@gmail.com">📧 Email</a>
     <a href="https://www.linkedin.com/in/ayush-vashishta-0649a9204/">💼 LinkedIn</a>
     <a href="https://github.com/yush9917">🐙 GitHub</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ayush Vashishtha | Data Analytics & AI Portfolio</p>
   </footer>
 </body>
 </html>
