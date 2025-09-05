@@ -8,31 +8,44 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0f2027;
+      background-color: #0a0a0a;
       color: white;
     }
     header {
       height: 100vh;
-      background: url("https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+      background: url("https://images.unsplash.com/photo-1505672678657-cc7037095e61?auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
+      background-attachment: fixed;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    header h1, header h3 {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       font-size: 3em;
       margin: 0;
-      background: rgba(0,0,0,0.6);
       padding: 10px 20px;
       border-radius: 10px;
+      background: rgba(0,0,0,0.5);
     }
     header h3 {
       margin-top: 10px;
-      background: rgba(0,0,0,0.5);
       padding: 5px 15px;
       border-radius: 8px;
+      background: rgba(0,0,0,0.4);
     }
     section {
       padding: 60px 20px;
@@ -82,7 +95,7 @@
     }
     footer a {
       margin: 10px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 8px;
       background: #f2c811;
       color: black;
@@ -100,17 +113,28 @@
   <!-- Hero Section -->
   <header>
     <h1>👋 Hi, I'm Ayush Vashishtha</h1>
-    <h3>Aspiring Data Analyst | AI Enthusiast | Ex-US IT Recruiter</h3>
+    <h3>Aspiring Data Analyst | AI & GenAI Enthusiast | Ex-US IT Recruiter</h3>
   </header>
 
   <!-- About Me -->
   <section>
     <h2>👨‍💻 About Me</h2>
     <p>
-      I’m <b>Ayush Vashishtha</b>, an aspiring <b>Data Analyst</b> with 2 years of 
-      experience in <b>US IT Recruitment</b>. Currently pursuing an <b>MBA</b> and 
-      building projects in <b>Python, SQL, Power BI, and AI</b>. Passionate about 
-      transforming data into actionable insights and automation.
+      I’m <b>Ayush Vashishtha</b>, an aspiring <b>Data Analyst</b> with a strong foundation in 
+      <b>Python, SQL, Excel, and Power BI</b>, currently pursuing my <b>MBA (2026)</b> from APJ Abdul Kalam Technical University.
+      <br><br>
+      With <b>2 years of professional experience in US IT Recruitment</b> at QualRec Solutions LLC, 
+      I developed expertise in understanding business requirements, analyzing data, and enabling decision-making.
+      This unique blend of <b>business knowledge + data analytics</b> allows me to bridge the gap between 
+      strategic needs and technical execution. 
+      <br><br>
+      I have worked on projects involving <b>AI chatbots, financial process automation, and Generative AI applications</b>—
+      showcasing my ability to apply technology for solving real-world problems. 
+      I’m passionate about <b>data storytelling, visualization, and predictive analytics</b> 
+      to empower businesses with actionable intelligence.
+      <br><br>
+      🌟 <b>Goal</b>: To secure a <b>Data Analytics internship</b> where I can apply my skills, 
+      learn from industry experts, and contribute to impactful AI-driven projects.
     </p>
   </section>
 
